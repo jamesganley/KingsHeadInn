@@ -61,6 +61,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
 	          <li class="nav-item cta"><a href="reservation.html" class="nav-link">Book a Room</a></li>
 	        </ul>
 	      </div>
@@ -118,11 +119,7 @@
               <span class="subheading">Book</span>
               <h2 class="mb-4">A Room</h2>
             </div>
-						<form id="booking-form" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-              <input type="hidden" name="form-name" value="booking">
-              <p class="d-none">
-                <label>Don't fill this out: <input name="bot-field"></label>
-              </p>
+						<form id="booking-form" novalidate>
               <div class="form-group">
                 <label for="fname">Full Name <span class="text-danger">*</span></label>
                 <input id="fname" name="Name" type="text" class="form-control booking-input" placeholder="e.g. John Smith" required>
@@ -265,11 +262,20 @@
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- EmailJS — sends form data directly to the inbox, no server needed -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     (function () {
-      var form   = document.getElementById('booking-form');
-      var status = document.getElementById('form-status');
-      var btn    = document.getElementById('form-submit');
+      // ⚠️ Replace these three with your real values from emailjs.com
+      var EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+      var EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+      var EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+      var form    = document.getElementById('booking-form');
+      var status  = document.getElementById('form-status');
+      var btn     = document.getElementById('form-submit');
 
       function showStatus(msg, ok) {
         status.style.display = 'block';
@@ -285,12 +291,6 @@
         if (checkout.value && checkout.value <= checkin.value) checkout.value = '';
       });
 
-      function encode(data) {
-        return Object.keys(data)
-          .map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]); })
-          .join('&');
-      }
-
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!form.checkValidity()) {
@@ -303,30 +303,24 @@
         btn.textContent = 'Sending…';
         status.style.display = 'none';
 
-        var data = {
-          'form-name': 'booking',
-          Name      : document.getElementById('fname').value,
-          Email     : document.getElementById('femail').value,
-          Phone     : document.getElementById('fphone').value,
-          Guests    : document.getElementById('fguests').value || 'Not specified',
-          CheckIn   : document.getElementById('fcheckin').value,
-          CheckOut  : document.getElementById('fcheckout').value,
-          Message   : document.getElementById('fmessage').value || 'None',
+        var params = {
+          from_name : document.getElementById('fname').value,
+          from_email: document.getElementById('femail').value,
+          phone     : document.getElementById('fphone').value,
+          guests    : document.getElementById('fguests').value || 'Not specified',
+          checkin   : document.getElementById('fcheckin').value,
+          checkout  : document.getElementById('fcheckout').value,
+          message   : document.getElementById('fmessage').value || 'None',
         };
 
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: encode(data)
-        })
-          .then(function (res) {
-            if (!res.ok) throw new Error(res.statusText);
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+          .then(function () {
             showStatus('Your booking request has been sent! We will be in touch shortly.', true);
             form.reset();
             form.classList.remove('was-validated');
           })
           .catch(function (err) {
-            console.error('Error:', err);
+            console.error('EmailJS error:', err);
             showStatus('Something went wrong. Please call us on 01403 782012 or email kingsheadinnbookings@gmail.com.', false);
           })
           .finally(function () {
