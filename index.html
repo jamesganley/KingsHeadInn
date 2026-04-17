@@ -26,6 +26,17 @@
     <link rel="shortcut icon" type="image/jpg" href="images\favicon.png"/>
   </head>
   <body>
+    <!-- Netlify form detection — hidden, build-time only -->
+    <form name="booking" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="Name">
+      <input type="email" name="Email">
+      <input type="tel" name="Phone">
+      <input type="text" name="Guests">
+      <input type="date" name="CheckIn">
+      <input type="date" name="CheckOut">
+      <textarea name="Message"></textarea>
+      <input name="bot-field">
+    </form>
     <div class="py-1 bg-black top">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
