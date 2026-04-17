@@ -24,6 +24,81 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="shortcut icon" type="image/jpg" href="images\favicon.png"/>
+
+    <style>
+      .feed-section {
+        background: linear-gradient(180deg, #f7f3ee 0%, #efe6d8 100%);
+      }
+      .feed-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        max-width: 540px;
+        margin: 0 auto;
+      }
+      .feed-card-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 22px;
+        border-bottom: 1px solid #f0ece6;
+        background: #fff;
+      }
+      .feed-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #c9a16a;
+        box-shadow: 0 0 0 4px rgba(201, 161, 106, 0.2);
+        animation: feed-pulse 2s ease-in-out infinite;
+      }
+      @keyframes feed-pulse {
+        0%, 100% { box-shadow: 0 0 0 4px rgba(201, 161, 106, 0.2); }
+        50%      { box-shadow: 0 0 0 8px rgba(201, 161, 106, 0.05); }
+      }
+      .feed-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1a1a1a;
+      }
+      .feed-handle {
+        margin-left: auto;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        color: #888;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .feed-handle:hover {
+        color: #c9a16a;
+        text-decoration: none;
+      }
+      .feed-card-body {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        background: #fafafa;
+      }
+      .feed-card-body .fb-page,
+      .feed-card-body .fb-page > span,
+      .feed-card-body iframe {
+        max-width: 100% !important;
+        border-radius: 8px;
+      }
+      .feed-footnote {
+        font-family: 'Poppins', sans-serif;
+        color: #555;
+        font-size: 15px;
+      }
+      @media (max-width: 576px) {
+        .feed-card-header { padding: 14px 16px; }
+        .feed-handle { display: none; }
+      }
+    </style>
   </head>
   <body>
     <div class="py-1 bg-black top">
@@ -77,35 +152,44 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light">
+    <section class="ftco-section bg-light feed-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-12 text-center heading-section ftco-animate">
             <span class="subheading">What's On</span>
-            <h2 class="mb-4">Live From Our Facebook</h2>
-            <p>Follow along for live music, quiz nights, seasonal specials and everything happening at The Kings Head Inn.</p>
+            <h2 class="mb-4">Straight From Our Feed</h2>
+            <p>The latest from our Facebook page — live music announcements, quiz nights, seasonal menus and everything else happening at The Kings Head Inn.</p>
           </div>
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-md-8 ftco-animate text-center">
-            <div id="fb-root"></div>
-            <div class="fb-page"
-                 data-href="https://www.facebook.com/thekingsheadbillingshurst/"
-                 data-tabs="timeline"
-                 data-width="500"
-                 data-height="700"
-                 data-small-header="false"
-                 data-adapt-container-width="true"
-                 data-hide-cover="false"
-                 data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/thekingsheadbillingshurst/" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/thekingsheadbillingshurst/">The Kings Head Inn on Facebook</a>
-              </blockquote>
+          <div class="col-md-10 col-lg-8 ftco-animate">
+            <div class="feed-card">
+              <div class="feed-card-header">
+                <span class="feed-dot"></span>
+                <span class="feed-label">Live Feed</span>
+                <a href="https://www.facebook.com/thekingsheadbillingshurst/" target="_blank" rel="noopener" class="feed-handle">@thekingsheadbillingshurst</a>
+              </div>
+              <div class="feed-card-body">
+                <div id="fb-root"></div>
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/thekingsheadbillingshurst/"
+                     data-tabs="timeline"
+                     data-width="500"
+                     data-height="700"
+                     data-small-header="true"
+                     data-adapt-container-width="true"
+                     data-hide-cover="true"
+                     data-show-facepile="false">
+                  <blockquote cite="https://www.facebook.com/thekingsheadbillingshurst/" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/thekingsheadbillingshurst/">The Kings Head Inn on Facebook</a>
+                  </blockquote>
+                </div>
+              </div>
             </div>
 
-            <div class="mt-5">
-              <p class="mb-3">For the full list of upcoming events, ticket links and RSVPs:</p>
+            <div class="text-center mt-5">
+              <p class="mb-3 feed-footnote">For the full list of upcoming events, ticket links and RSVPs:</p>
               <a href="https://www.facebook.com/thekingsheadbillingshurst/events" target="_blank" rel="noopener" class="btn btn-primary py-3 px-4">View All Events on Facebook</a>
             </div>
           </div>
