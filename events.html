@@ -98,6 +98,51 @@
         .feed-card-header { padding: 14px 16px; }
         .feed-handle { display: none; }
       }
+
+      .feed-tabs {
+        display: inline-flex;
+        background: #fff;
+        border-radius: 999px;
+        padding: 6px;
+        box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 30px;
+      }
+      .feed-tab {
+        border: none;
+        background: transparent;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #888;
+        padding: 10px 26px;
+        border-radius: 999px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s ease;
+      }
+      .feed-tab:hover { color: #1a1a1a; }
+      .feed-tab.active {
+        background: #c9a16a;
+        color: #fff;
+        box-shadow: 0 6px 16px -6px rgba(201, 161, 106, 0.6);
+      }
+      .feed-panel { display: none; }
+      .feed-panel.active { display: block; }
+
+      .tiktok-embed-wrap {
+        background: #fafafa;
+        border-radius: 8px;
+        overflow: hidden;
+        min-height: 700px;
+      }
+      .tiktok-embed-wrap blockquote.tiktok-embed {
+        margin: 0 auto !important;
+        max-width: 100% !important;
+      }
     </style>
   </head>
   <body>
@@ -163,27 +208,61 @@
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-md-10 col-lg-8 ftco-animate">
-            <div class="feed-card">
-              <div class="feed-card-header">
-                <span class="feed-dot"></span>
-                <span class="feed-label">Live Feed</span>
-                <a href="https://www.facebook.com/thekingsheadbillingshurst/" target="_blank" rel="noopener" class="feed-handle">@thekingsheadbillingshurst</a>
+          <div class="col-md-10 col-lg-8 ftco-animate text-center">
+            <div class="feed-tabs" role="tablist">
+              <button type="button" class="feed-tab active" data-target="panel-facebook" role="tab" aria-selected="true">
+                <span class="icon-facebook"></span> Facebook
+              </button>
+              <button type="button" class="feed-tab" data-target="panel-tiktok" role="tab" aria-selected="false">
+                TikTok
+              </button>
+            </div>
+
+            <div class="feed-panel active" id="panel-facebook" role="tabpanel">
+              <div class="feed-card">
+                <div class="feed-card-header">
+                  <span class="feed-dot"></span>
+                  <span class="feed-label">Facebook</span>
+                  <a href="https://www.facebook.com/thekingsheadbillingshurst/" target="_blank" rel="noopener" class="feed-handle">@thekingsheadbillingshurst</a>
+                </div>
+                <div class="feed-card-body">
+                  <div id="fb-root"></div>
+                  <div class="fb-page"
+                       data-href="https://www.facebook.com/thekingsheadbillingshurst/"
+                       data-tabs="timeline"
+                       data-width="500"
+                       data-height="700"
+                       data-small-header="true"
+                       data-adapt-container-width="true"
+                       data-hide-cover="true"
+                       data-show-facepile="false">
+                    <blockquote cite="https://www.facebook.com/thekingsheadbillingshurst/" class="fb-xfbml-parse-ignore">
+                      <a href="https://www.facebook.com/thekingsheadbillingshurst/">The Kings Head Inn on Facebook</a>
+                    </blockquote>
+                  </div>
+                </div>
               </div>
-              <div class="feed-card-body">
-                <div id="fb-root"></div>
-                <div class="fb-page"
-                     data-href="https://www.facebook.com/thekingsheadbillingshurst/"
-                     data-tabs="timeline"
-                     data-width="500"
-                     data-height="700"
-                     data-small-header="true"
-                     data-adapt-container-width="true"
-                     data-hide-cover="true"
-                     data-show-facepile="false">
-                  <blockquote cite="https://www.facebook.com/thekingsheadbillingshurst/" class="fb-xfbml-parse-ignore">
-                    <a href="https://www.facebook.com/thekingsheadbillingshurst/">The Kings Head Inn on Facebook</a>
-                  </blockquote>
+            </div>
+
+            <div class="feed-panel" id="panel-tiktok" role="tabpanel">
+              <div class="feed-card">
+                <div class="feed-card-header">
+                  <span class="feed-dot"></span>
+                  <span class="feed-label">TikTok</span>
+                  <a href="https://www.tiktok.com/@kingsheadbillingshurst" target="_blank" rel="noopener" class="feed-handle">@kingsheadbillingshurst</a>
+                </div>
+                <div class="feed-card-body">
+                  <div class="tiktok-embed-wrap">
+                    <blockquote class="tiktok-embed"
+                                cite="https://www.tiktok.com/@kingsheadbillingshurst"
+                                data-unique-id="kingsheadbillingshurst"
+                                data-embed-type="creator"
+                                style="max-width: 780px; min-width: 288px;">
+                      <section>
+                        <a target="_blank" href="https://www.tiktok.com/@kingsheadbillingshurst?refer=creator_embed">@kingsheadbillingshurst</a>
+                      </section>
+                    </blockquote>
+                  </div>
                 </div>
               </div>
             </div>
@@ -195,52 +274,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="ftco-section ftco-counter img ftco-no-pt" id="section-counter">
-    	<div class="container">
-    		<div class="row d-md-flex">
-    			<div class="col-md-9">
-    				<div class="row d-md-flex align-items-center">
-		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		              <div class="text">
-		                <strong class="number" data-number="52">0</strong>
-		                <span>Live Music Nights</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		              <div class="text">
-		                <strong class="number" data-number="24">0</strong>
-		                <span>Quiz Nights a Year</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		              <div class="text">
-		                <strong class="number" data-number="12">0</strong>
-		                <span>Seasonal Events</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0 d-flex justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18">
-		              <div class="text">
-		                <strong class="number" data-number="100000">0</strong>
-		                <span>Happy Customers</span>
-		              </div>
-		            </div>
-		          </div>
-	          </div>
-          </div>
-          <div class="col-md-3 text-center text-md-left">
-          	<p>Live music every weekend</p>
-          </div>
-        </div>
-    	</div>
     </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -294,7 +327,7 @@
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Easiest Enquires</h2>
+              <h2 class="ftco-heading-2">Easiest Enquiries</h2>
               <p>The easiest way to get in touch with us is to call at 01403 782012 or email us.</p>
               <form action="mailto:kingsheadinnbookings@gmail.com" class="subscribe-form">
                 <div class="form-group">
@@ -315,6 +348,30 @@
   <!-- Facebook SDK -->
   <script async defer crossorigin="anonymous"
           src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0"></script>
+
+  <!-- TikTok embed -->
+  <script async src="https://www.tiktok.com/embed.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabs = document.querySelectorAll('.feed-tab');
+      var panels = document.querySelectorAll('.feed-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var target = tab.getAttribute('data-target');
+          tabs.forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          var panel = document.getElementById(target);
+          if (panel) panel.classList.add('active');
+        });
+      });
+    });
+  </script>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
