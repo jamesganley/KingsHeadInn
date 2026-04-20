@@ -42,12 +42,14 @@
 
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
-	    loop:true,
-	    autoplay: true,
+	    loop:false,
+	    autoplay: false,
 	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-	    nav:true,
+	    mouseDrag: false,
+	    touchDrag: false,
+	    pullDrag: false,
+	    freeDrag: false,
+	    nav:false,
 	    dots: false,
 	    autoplayHoverPause: false,
 	    items: 1,
