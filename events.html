@@ -7,6 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -26,15 +27,127 @@
     <link rel="shortcut icon" type="image/jpg" href="images\favicon.png"/>
 
     <style>
+      /* ===== What's On pillar cards ===== */
+      .whats-on-section { background: #fff; }
+      .event-pillar {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 380px;
+        border-radius: 16px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        text-decoration: none !important;
+        box-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.35);
+        transition: transform .35s ease, box-shadow .35s ease;
+      }
+      .event-pillar:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 70px -28px rgba(0, 0, 0, 0.45);
+        text-decoration: none;
+      }
+      .event-pillar::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.88) 100%);
+      }
+      .event-pillar-badge {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.92);
+        color: #1a1a1a;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+      .event-pillar-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 26px 26px 28px;
+        color: #fff;
+        z-index: 2;
+      }
+      .event-pillar-content h3 {
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+      }
+      .event-pillar-content p {
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.55;
+      }
+      .event-pillar-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 14px;
+        color: #c9a16a;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      /* ===== Live feed section ===== */
       .feed-section {
         background: linear-gradient(180deg, #f7f3ee 0%, #efe6d8 100%);
       }
+      .feed-tabs {
+        display: inline-flex;
+        background: #fff;
+        border-radius: 999px;
+        padding: 6px;
+        box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.18);
+        margin-bottom: 34px;
+      }
+      .feed-tab {
+        border: none;
+        background: transparent;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #888;
+        padding: 11px 28px;
+        border-radius: 999px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s ease;
+      }
+      .feed-tab:hover { color: #1a1a1a; }
+      .feed-tab.active {
+        background: #c9a16a;
+        color: #fff;
+        box-shadow: 0 6px 16px -6px rgba(201, 161, 106, 0.6);
+      }
+      .feed-panel { display: none; }
+      .feed-panel.active { display: block; }
+
       .feed-card {
         background: #fff;
-        border-radius: 14px;
-        box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.04);
+        border-radius: 18px;
+        box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.25), 0 6px 18px rgba(0, 0, 0, 0.05);
         overflow: hidden;
-        max-width: 540px;
+        max-width: 520px;
         margin: 0 auto;
       }
       .feed-card-header {
@@ -78,70 +191,79 @@
         text-decoration: none;
       }
       .feed-card-body {
-        padding: 10px;
+        padding: 0;
+        background: #fafafa;
+        min-height: 720px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      .feed-card-body iframe,
+      .feed-card-body .tiktok-embed-wrap {
+        display: block;
+        width: 100%;
+        border: none;
+      }
+      .fb-embed {
+        width: 100%;
+        height: 720px;
+        border: none;
+        display: block;
+      }
+      .tiktok-embed-wrap {
+        width: 100%;
+        min-height: 720px;
+        padding: 20px 16px;
         display: flex;
         justify-content: center;
-        background: #fafafa;
+        align-items: flex-start;
       }
-      .feed-card-body .fb-page,
-      .feed-card-body .fb-page > span,
-      .feed-card-body iframe {
+      .tiktok-embed-wrap blockquote.tiktok-embed {
+        margin: 0 auto !important;
         max-width: 100% !important;
-        border-radius: 8px;
       }
       .feed-footnote {
         font-family: 'Poppins', sans-serif;
         color: #555;
         font-size: 15px;
       }
+
+      /* ===== Plan your visit CTA ===== */
+      .plan-visit-section {
+        position: relative;
+        padding: 100px 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('images/KHOutSideNight.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+      }
+      .plan-visit-section h2 {
+        color: #fff;
+        font-size: 44px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .plan-visit-section p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 17px;
+        max-width: 640px;
+        margin: 0 auto 36px;
+      }
+      .plan-visit-section .btn {
+        margin: 6px 8px;
+      }
+
+      @media (max-width: 768px) {
+        .event-pillar { min-height: 320px; }
+        .plan-visit-section { padding: 70px 0; background-attachment: scroll; }
+        .plan-visit-section h2 { font-size: 32px; }
+      }
       @media (max-width: 576px) {
         .feed-card-header { padding: 14px 16px; }
         .feed-handle { display: none; }
-      }
-
-      .feed-tabs {
-        display: inline-flex;
-        background: #fff;
-        border-radius: 999px;
-        padding: 6px;
-        box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.15);
-        margin-bottom: 30px;
-      }
-      .feed-tab {
-        border: none;
-        background: transparent;
-        font-family: 'Poppins', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        color: #888;
-        padding: 10px 26px;
-        border-radius: 999px;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.25s ease;
-      }
-      .feed-tab:hover { color: #1a1a1a; }
-      .feed-tab.active {
-        background: #c9a16a;
-        color: #fff;
-        box-shadow: 0 6px 16px -6px rgba(201, 161, 106, 0.6);
-      }
-      .feed-panel { display: none; }
-      .feed-panel.active { display: block; }
-
-      .tiktok-embed-wrap {
-        background: #fafafa;
-        border-radius: 8px;
-        overflow: hidden;
-        min-height: 700px;
-      }
-      .tiktok-embed-wrap blockquote.tiktok-embed {
-        margin: 0 auto !important;
-        max-width: 100% !important;
+        .fb-embed { height: 640px; }
+        .feed-card-body { min-height: 640px; }
       }
     </style>
   </head>
@@ -197,13 +319,13 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light feed-section">
+    <section class="ftco-section feed-section" id="live-feed">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-            <span class="subheading">What's On</span>
+          <div class="col-md-10 text-center heading-section ftco-animate">
+            <span class="subheading">Live Updates</span>
             <h2 class="mb-4">Straight From Our Feed</h2>
-            <p>The latest from our Facebook page — live music announcements, quiz nights, seasonal menus and everything else happening at The Kings Head Inn.</p>
+            <p>Follow along for upcoming gigs, seasonal menus, last-minute announcements and behind-the-scenes moments from our team.</p>
           </div>
         </div>
 
@@ -227,9 +349,8 @@
                 </div>
                 <div class="feed-card-body">
                   <iframe
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthekingsheadbillingshurst%2F&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
-                    width="500" height="700"
-                    style="border:none;overflow:hidden;max-width:100%;border-radius:8px;"
+                    class="fb-embed"
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fthekingsheadbillingshurst%2F&tabs=timeline&width=500&height=720&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId"
                     scrolling="no" frameborder="0" allowfullscreen="true"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     loading="lazy"
@@ -251,7 +372,7 @@
                                 cite="https://www.tiktok.com/@kingsheadbillingshurst"
                                 data-unique-id="kingsheadbillingshurst"
                                 data-embed-type="creator"
-                                style="max-width: 780px; min-width: 288px;">
+                                style="max-width: 480px; min-width: 288px;">
                       <section>
                         <a target="_blank" href="https://www.tiktok.com/@kingsheadbillingshurst?refer=creator_embed">@kingsheadbillingshurst</a>
                       </section>
@@ -265,6 +386,21 @@
               <p class="mb-3 feed-footnote">For the full list of upcoming events, ticket links and RSVPs:</p>
               <a href="https://www.facebook.com/thekingsheadbillingshurst/events" target="_blank" rel="noopener" class="btn btn-primary py-3 px-4">View All Events on Facebook</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-visit-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-10 ftco-animate">
+            <span class="subheading" style="color:#c9a16a;">Plan Your Visit</span>
+            <h2>A proper welcome, every time.</h2>
+            <p>Reserve a table, book a room upstairs, or get in touch to plan a private gathering. Our team is always happy to help.</p>
+            <a href="reservation.html" class="btn btn-primary py-3 px-4">Book a Room</a>
+            <a href="mailto:kingsheadinnbookings@gmail.com" class="btn btn-outline-light py-3 px-4">Email Us</a>
+            <a href="tel:01403782012" class="btn btn-outline-light py-3 px-4">Call 01403 782012</a>
           </div>
         </div>
       </div>

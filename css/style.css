@@ -9890,3 +9890,24 @@ textarea.form-control {
     font-size: 15px;
   }
 }
+
+/* Brand logo + active nav overrides */
+.ftco-navbar-light .navbar-brand {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  color: #c8a97e !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.ftco-navbar-light .navbar-brand:hover,
+.ftco-navbar-light .navbar-brand:focus {
+  color: #c8a97e !important;
+}
+.ftco-navbar-light .navbar-nav > .nav-item.active > a,
+.ftco-navbar-light .navbar-nav > .nav-item.active > a:hover,
+.ftco-navbar-light .navbar-nav > .nav-item.active > a:focus {
+  color: #ffffff !important;
+}
+.ftco-navbar-light .navbar-nav > .nav-item.active.cta > a {
+  color: #ffffff !important;
+  background: #c8a97e !important;
+}
