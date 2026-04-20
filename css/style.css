@@ -9951,3 +9951,12 @@ textarea.form-control {
   background: #c8a97e !important;
   border-radius: 5px !important;
 }
+
+/* CTA button text always white */
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a,
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a:hover,
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a:focus,
+.ftco-navbar-light.scrolled .nav-item.cta > a,
+.ftco-navbar-light.scrolled .nav-item.cta > a:hover {
+  color: #ffffff !important;
+}
