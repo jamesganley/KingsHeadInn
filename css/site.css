@@ -1509,24 +1509,26 @@ a:hover {
   color: var(--muted);
   max-width: 470px;
 }
-.menu-weekly-offer {
-  grid-column: 1 / -1;
+.kitchen-weekly-offer {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: 24px;
-  margin: 26px 0 -30px;
+  gap: 18px;
+  margin: 28px 0 4px;
+  padding: 17px 0;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
   color: var(--gold);
 }
-.menu-weekly-offer span {
+.kitchen-weekly-offer span {
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-.menu-weekly-offer strong {
+.kitchen-weekly-offer strong {
   font-family: var(--serif);
-  font-size: clamp(25px, 2.5vw, 36px);
+  font-size: clamp(24px, 2.2vw, 32px);
   font-weight: 600;
   line-height: 1.1;
 }
@@ -1657,11 +1659,9 @@ a:hover {
     margin-bottom: 50px;
     padding-bottom: 40px;
   }
-  .menu-weekly-offer {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 7px;
-    margin: 5px 0 -15px;
+  .kitchen-weekly-offer {
+    gap: 12px;
+    margin-top: 24px;
   }
   .menu-columns {
     gap: 55px;
