@@ -9960,3 +9960,97 @@ textarea.form-control {
 .ftco-navbar-light.scrolled .nav-item.cta > a:hover {
   color: #ffffff !important;
 }
+
+/* Food and drink hub */
+.hero-wrap.hero-wrap-2.food-hero { height: clamp(650px, 82vh, 780px); background-position: center; }
+.food-hero .overlay { background: linear-gradient(180deg, rgba(10,8,5,.08) 20%, rgba(10,8,5,.18) 58%, rgba(10,8,5,.7) 100%); opacity: 1; }
+.hero-wrap.hero-wrap-2.food-hero .slider-text { height: 100%; min-height: 650px; }
+.eyebrow { display: block; margin-bottom: 8px; color: #d8b684; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+.food-intro { max-width: 610px; margin: 14px auto 0; color: rgba(255,255,255,.88); font-size: 17px; }
+.menu-hub { background: #f7f3eb; }
+.menu-feature { position: relative; display: flex; min-height: 520px; align-items: flex-end; overflow: hidden; border-radius: 4px; background-position: center; background-size: cover; box-shadow: 0 15px 40px rgba(41,31,18,.15); }
+.menu-feature::before { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, transparent 25%, rgba(13,10,7,.88) 100%); }
+.menu-feature-drinks { background-position: 25% center; }
+.menu-feature-content { position: relative; z-index: 1; padding: 42px; color: #fff; }
+.menu-feature-content > span { color: #d8b684; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+.menu-feature-content h2 { margin: 7px 0 12px; color: #fff; font-family: 'Cinzel', serif; font-size: 38px; }
+.menu-feature-content p { max-width: 420px; color: rgba(255,255,255,.8); }
+
+/* Interactive ales page */
+.ales-page { min-height: 100vh; background: #17120d; color: #fff; }
+.ales-navbar { position: relative; z-index: 20; padding: 18px 0; background: #17120d !important; }
+.ales-navbar .navbar-brand { color: #d4ad76 !important; font-family: 'Cinzel', serif; font-weight: 700; }
+.ales-navbar .nav-link { color: rgba(255,255,255,.72) !important; }
+.ales-navbar .active .nav-link, .ales-navbar .nav-link:hover { color: #fff !important; }
+.ales-navbar .cta .nav-link { padding-right: 18px !important; padding-left: 18px !important; border-radius: 3px; background: #b8905d; color: #fff !important; }
+.ales-heading { position: relative; z-index: 5; padding: 40px 5vw 34px; text-align: center; background: #17120d; }
+.ales-heading h1 { margin: 0; color: #fff; font-family: 'Cinzel', serif; font-size: clamp(2.4rem,5vw,4.7rem); letter-spacing: .05em; text-transform: uppercase; }
+.ales-heading p { margin: 9px 0 0; color: rgba(255,255,255,.6); }
+.ales-back { position: absolute; top: 53px; left: 5vw; color: rgba(255,255,255,.65); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+.ales-back:hover { color: #d4ad76; }
+.ale-explorer { position: relative; width: 100%; max-width: 1800px; margin: 0 auto; overflow: hidden; background: #21160e; }
+.coaster-scene { position: relative; transition: transform .45s ease; }
+.coaster-scene > img { display: block; width: 100%; height: auto; }
+.ale-hotspot { position: absolute; z-index: 3; display: block; padding: 0; border: 2px solid transparent; border-radius: 18%; outline: none; background: transparent; cursor: pointer; transition: border-color .2s, background .2s, box-shadow .2s, transform .2s; }
+.ale-hotspot.circle { border-radius: 50%; }
+.ale-hotspot.ipa,
+.ale-hotspot.st-edmunds,
+.ale-hotspot.crafty-hen {
+  border: 0;
+  border-radius: 0;
+}
+.ale-hotspot.ipa {
+  clip-path: polygon(14% 8%, 52% 0, 88% 9%, 100% 24%, 96% 76%, 73% 93%, 50% 100%, 26% 92%, 3% 75%, 0 25%);
+}
+.ale-hotspot.st-edmunds {
+  clip-path: polygon(17% 8%, 50% 0, 83% 8%, 100% 24%, 95% 79%, 75% 94%, 50% 100%, 25% 94%, 5% 79%, 0 24%);
+}
+.ale-hotspot.crafty-hen {
+  clip-path: polygon(18% 0, 82% 0, 100% 17%, 100% 83%, 82% 100%, 18% 100%, 0 83%, 0 17%);
+}
+.ale-hotspot span { position: absolute; bottom: -31px; left: 50%; padding: 5px 9px; border-radius: 2px; opacity: 0; color: #17120d; background: #f4ead8; font-size: 10px; font-weight: 700; letter-spacing: .05em; line-height: 1.15; white-space: nowrap; text-transform: uppercase; transform: translate(-50%,5px); transition: opacity .2s, transform .2s; pointer-events: none; }
+.ale-hotspot:hover, .ale-hotspot:focus-visible, .ale-hotspot.is-active { border-color: #f1ca8a; background: rgba(241,202,138,.13); box-shadow: 0 0 0 5px rgba(241,202,138,.2), 0 8px 28px rgba(0,0,0,.35); filter: drop-shadow(0 0 3px #f1ca8a) drop-shadow(0 0 8px rgba(241,202,138,.55)); transform: scale(1.03); }
+.ale-hotspot:hover span, .ale-hotspot:focus-visible span, .ale-hotspot.is-active span { opacity: 1; transform: translate(-50%,0); }
+.level-head { top: 5.5%; left: 5.8%; width: 19.7%; height: 28.8%; }
+.neck-oil { top: 3.8%; left: 29.6%; width: 18.7%; height: 29%; }
+.hazy-day { top: 13.1%; left: 65.3%; width: 17.2%; height: 28.3%; }
+.ipa { top: 11.7%; left: 83%; width: 15.5%; height: 31%; }
+.london-glory { top: 35%; left: 2.8%; width: 21.2%; height: 29.8%; transform: rotate(-2deg); }
+.session-hen { top: 35%; left: 24.3%; width: 18.8%; height: 28.8%; }
+.st-edmunds { top: 39.7%; left: 72.4%; width: 20.3%; height: 34.5%; }
+.speckled-hen { top: 64.4%; left: 3.9%; width: 20.1%; height: 31.4%; }
+.crafty-hen { top: 65.8%; left: 30.3%; width: 20.5%; height: 31.2%; }
+.old-bob { top: 69%; left: 59.5%; width: 20.2%; height: 28.2%; transform: rotate(-1deg); }
+.london-glory:hover, .london-glory:focus-visible, .london-glory.is-active { transform: rotate(-2deg) scale(1.03); }
+.old-bob:hover, .old-bob:focus-visible, .old-bob.is-active { transform: rotate(-1deg) scale(1.03); }
+.tap-prompt { position: absolute; right: 3.5%; bottom: 3.7%; z-index: 2; margin: 0; padding: 9px 14px; border: 1px solid rgba(255,255,255,.4); border-radius: 30px; color: #fff; background: rgba(18,12,8,.68); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; backdrop-filter: blur(5px); }
+.tap-prompt span { display: inline-flex; width: 20px; height: 20px; margin-right: 5px; align-items: center; justify-content: center; border-radius: 50%; color: #17120d; background: #d4ad76; font-weight: 700; }
+.ale-detail { position: absolute; top: 0; right: 0; z-index: 10; width: min(410px,100%); height: 100%; padding: clamp(34px,5vw,70px) clamp(28px,4vw,54px); overflow-y: auto; opacity: 0; color: #e8dfd2; background: rgba(23,18,13,.97); box-shadow: -15px 0 50px rgba(0,0,0,.35); transform: translateX(102%); transition: opacity .35s, transform .45s cubic-bezier(.2,.8,.2,1); backdrop-filter: blur(16px); }
+.ale-detail.is-open { opacity: 1; transform: translateX(0); }
+.ale-detail-close { position: absolute; top: 18px; right: 22px; border: 0; color: rgba(255,255,255,.7); background: transparent; font-size: 35px; line-height: 1; cursor: pointer; }
+.ale-detail-kicker, .ale-notes > span { color: #d4ad76; font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.ale-detail h2 { margin: 11px 0 15px; color: #fff; font-family: 'Cinzel',serif; font-size: clamp(2rem,4vw,3.2rem); line-height: 1.08; }
+.ale-meta { display: flex; gap: 8px; margin-bottom: 28px; }
+.ale-meta span, .ale-meta strong { padding: 7px 10px; border: 1px solid rgba(212,173,118,.35); color: #d4ad76; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.ale-detail > p { line-height: 1.75; }
+.ale-notes { margin: 27px 0; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); }
+.ale-notes p { margin: 8px 0 0; color: #fff; }
+.ale-detail .availability-note { color: rgba(255,255,255,.48); font-size: 12px; }
+.noscript-message { padding: 20px; text-align: center; }
+@media (min-width: 992px) { .coaster-scene.has-selection { transform: translateX(-8%); } }
+@media (max-width: 767.98px) {
+  .hero-wrap.hero-wrap-2.food-hero { height: 560px; background-position: center; }
+  .hero-wrap.hero-wrap-2.food-hero .slider-text { height: 560px; min-height: 560px; }
+  .menu-feature { min-height: 440px; }
+  .menu-feature-content { padding: 28px; }
+  .ales-heading { padding: 35px 18px 28px; }
+  .ales-back { position: static; display: block; margin-bottom: 24px; }
+  .ale-explorer { overflow: visible; }
+  .coaster-scene { overflow: hidden; }
+  .ale-detail { position: relative; width: 100%; height: auto; max-height: 0; padding-top: 0; padding-bottom: 0; opacity: 0; transform: none; transition: max-height .45s, opacity .3s, padding .45s; }
+  .ale-detail.is-open { max-height: 620px; padding-top: 50px; padding-bottom: 45px; opacity: 1; }
+  .ale-hotspot { border-width: 1px; }
+  .ale-hotspot span { display: none; }
+  .tap-prompt { right: 2%; bottom: 2%; padding: 5px 8px; font-size: 8px; }
+  .tap-prompt span { width: 15px; height: 15px; }
+}

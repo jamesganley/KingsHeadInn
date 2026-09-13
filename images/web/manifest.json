@@ -1,0 +1,341 @@
+[
+  {
+    "name": "bar",
+    "source": "FullBarWithPerson.png",
+    "original_bytes": 2450154,
+    "brightness": 1.0,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\bar-640.webp",
+        "width": 640,
+        "height": 427,
+        "bytes": 87312
+      },
+      {
+        "file": "images\\web\\bar-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 221038
+      },
+      {
+        "file": "images\\web\\bar-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 306998
+      }
+    ]
+  },
+  {
+    "name": "garden",
+    "source": "outsideLongView.png",
+    "original_bytes": 2636176,
+    "brightness": 1.0,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\garden-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 141506
+      },
+      {
+        "file": "images\\web\\garden-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 365000
+      },
+      {
+        "file": "images\\web\\garden-1254.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 389774
+      }
+    ]
+  },
+  {
+    "name": "bedroom",
+    "source": "KH1BedroomJ.jpg",
+    "original_bytes": 3723625,
+    "brightness": 1.07,
+    "colour": 1.02,
+    "outputs": [
+      {
+        "file": "images\\web\\bedroom-640.webp",
+        "width": 640,
+        "height": 287,
+        "bytes": 38706
+      },
+      {
+        "file": "images\\web\\bedroom-1200.webp",
+        "width": 1200,
+        "height": 537,
+        "bytes": 107280
+      },
+      {
+        "file": "images\\web\\bedroom-1920.webp",
+        "width": 1920,
+        "height": 860,
+        "bytes": 226566
+      }
+    ]
+  },
+  {
+    "name": "room-detail",
+    "source": "KH2Bedroom.jpg",
+    "original_bytes": 16177662,
+    "brightness": 1.06,
+    "colour": 1.02,
+    "outputs": [
+      {
+        "file": "images\\web\\room-detail-640.webp",
+        "width": 640,
+        "height": 408,
+        "bytes": 58468
+      },
+      {
+        "file": "images\\web\\room-detail-1200.webp",
+        "width": 1200,
+        "height": 765,
+        "bytes": 160468
+      },
+      {
+        "file": "images\\web\\room-detail-1920.webp",
+        "width": 1920,
+        "height": 1224,
+        "bytes": 346966
+      }
+    ]
+  },
+  {
+    "name": "food-fish",
+    "source": "KHFood_3.jpg",
+    "original_bytes": 2607763,
+    "brightness": 1.02,
+    "colour": 0.96,
+    "outputs": [
+      {
+        "file": "images\\web\\food-fish-640.webp",
+        "width": 640,
+        "height": 853,
+        "bytes": 97882
+      },
+      {
+        "file": "images\\web\\food-fish-1200.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 266744
+      },
+      {
+        "file": "images\\web\\food-fish-1920.webp",
+        "width": 1920,
+        "height": 2560,
+        "bytes": 665526
+      }
+    ]
+  },
+  {
+    "name": "food-burger",
+    "source": "KHFood_2.jpg",
+    "original_bytes": 2298981,
+    "brightness": 1.0,
+    "colour": 0.93,
+    "outputs": [
+      {
+        "file": "images\\web\\food-burger-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 69082
+      },
+      {
+        "file": "images\\web\\food-burger-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 172512
+      },
+      {
+        "file": "images\\web\\food-burger-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 337208
+      }
+    ]
+  },
+  {
+    "name": "food-cookies",
+    "source": "KHFood_1.jpg",
+    "original_bytes": 2682263,
+    "brightness": 1.02,
+    "colour": 0.96,
+    "outputs": [
+      {
+        "file": "images\\web\\food-cookies-640.webp",
+        "width": 640,
+        "height": 480,
+        "bytes": 70590
+      },
+      {
+        "file": "images\\web\\food-cookies-1200.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 193306
+      },
+      {
+        "file": "images\\web\\food-cookies-1920.webp",
+        "width": 1920,
+        "height": 1440,
+        "bytes": 428562
+      }
+    ]
+  },
+  {
+    "name": "music",
+    "source": "events-live-music.png",
+    "original_bytes": 460042,
+    "brightness": 1.03,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\music-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 38548
+      }
+    ]
+  },
+  {
+    "name": "event-room",
+    "source": "BandNightFullRoom.png",
+    "original_bytes": 1804055,
+    "brightness": 1.0,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\event-room-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 41574
+      },
+      {
+        "file": "images\\web\\event-room-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 92090
+      },
+      {
+        "file": "images\\web\\event-room-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 136978
+      }
+    ]
+  },
+  {
+    "name": "sport",
+    "source": "events-live-sport.png",
+    "original_bytes": 3048160,
+    "brightness": 1.0,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\sport-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 88578
+      },
+      {
+        "file": "images\\web\\sport-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 228210
+      },
+      {
+        "file": "images\\web\\sport-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 348490
+      }
+    ]
+  },
+  {
+    "name": "coasters",
+    "source": "ales-coasters.png",
+    "original_bytes": 2712871,
+    "brightness": 1.0,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\coasters-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 96108
+      },
+      {
+        "file": "images\\web\\coasters-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 261010
+      },
+      {
+        "file": "images\\web\\coasters-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 402060
+      }
+    ]
+  },
+  {
+    "name": "food-wall",
+    "source": "food-drink-hero-clean.png",
+    "original_bytes": 3147333,
+    "brightness": 1.0,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\food-wall-640.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 83482
+      },
+      {
+        "file": "images\\web\\food-wall-1200.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 281632
+      },
+      {
+        "file": "images\\web\\food-wall-1672.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 486384
+      }
+    ]
+  },
+  {
+    "name": "exterior",
+    "source": "KHFrontBig.jpg",
+    "original_bytes": 463975,
+    "brightness": 1.02,
+    "colour": 1.0,
+    "outputs": [
+      {
+        "file": "images\\web\\exterior-640.webp",
+        "width": 640,
+        "height": 640,
+        "bytes": 59230
+      },
+      {
+        "file": "images\\web\\exterior-1200.webp",
+        "width": 1200,
+        "height": 1200,
+        "bytes": 172774
+      },
+      {
+        "file": "images\\web\\exterior-1667.webp",
+        "width": 1667,
+        "height": 1667,
+        "bytes": 295954
+      }
+    ]
+  }
+]

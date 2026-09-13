@@ -1,0 +1,152 @@
+[
+  {
+    "number": 1,
+    "original": "images/KH1Bedroom.jpg",
+    "original_sha256": "f446e4819ac59bfe9d598c15df14fb9b698874c29c848a1a49b6ff0a689b70eb",
+    "source": "images/rooms-enhanced/KH1Bedroom-enhanced.png",
+    "outputs": [
+      {
+        "file": "images/web/room-1-480.webp",
+        "width": 480,
+        "height": 264,
+        "bytes": 42352
+      },
+      {
+        "file": "images/web/room-1-960.webp",
+        "width": 960,
+        "height": 527,
+        "bytes": 142348
+      },
+      {
+        "file": "images/web/room-1-1692.webp",
+        "width": 1692,
+        "height": 929,
+        "bytes": 342800
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "original": "images/KH2Bedroom.jpg",
+    "original_sha256": "3c5d10499779e0ce8d695726064a0ee7fd764afc3d249b3854499bf4adc172e2",
+    "source": "images/rooms-enhanced/KH2Bedroom-enhanced.png",
+    "outputs": [
+      {
+        "file": "images/web/room-2-480.webp",
+        "width": 480,
+        "height": 306,
+        "bytes": 38270
+      },
+      {
+        "file": "images/web/room-2-960.webp",
+        "width": 960,
+        "height": 612,
+        "bytes": 125178
+      },
+      {
+        "file": "images/web/room-2-1570.webp",
+        "width": 1570,
+        "height": 1001,
+        "bytes": 273524
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "original": "images/KH3Bedroom.jpg",
+    "original_sha256": "b906ed39847656258cc5863aa6aed46a3258ad206db976a798090e88a3ae2ac3",
+    "source": "images/rooms-enhanced/KH3Bedroom-enhanced.png",
+    "outputs": [
+      {
+        "file": "images/web/room-3-480.webp",
+        "width": 480,
+        "height": 676,
+        "bytes": 32596
+      },
+      {
+        "file": "images/web/room-3-960.webp",
+        "width": 960,
+        "height": 1351,
+        "bytes": 94940
+      },
+      {
+        "file": "images/web/room-3-1057.webp",
+        "width": 1057,
+        "height": 1488,
+        "bytes": 110942
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "original": "images/KH4Bedroom.jpg",
+    "original_sha256": "7c32bb36c4f67af67b4f8af052091269b73da08bb09a364cb7dd2f541020922a",
+    "source": "images/rooms-enhanced/KH4Bedroom-enhanced.png",
+    "outputs": [
+      {
+        "file": "images/web/room-4-480.webp",
+        "width": 480,
+        "height": 860,
+        "bytes": 151924
+      },
+      {
+        "file": "images/web/room-4-937.webp",
+        "width": 937,
+        "height": 1679,
+        "bytes": 410520
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "original": "images/KH6Bedroom.jpg",
+    "original_sha256": "bfc6515fe43f9285bdb1aa46ce96044736378614851daa99727f8425cf58130d",
+    "source": "images/rooms-enhanced/KH6Bedroom-enhanced.png",
+    "outputs": [
+      {
+        "file": "images/web/room-6-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 40108
+      },
+      {
+        "file": "images/web/room-6-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 130298
+      },
+      {
+        "file": "images/web/room-6-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 281758
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "original": "images/KH7Bedroom.jpg",
+    "original_sha256": "f41ecabc02c11feeadbc1e250c3eccf5265f0c747fa4dcfaa1fb0cfd2fa2e1d8",
+    "source": "images/rooms-enhanced/KH7Bedroom-enhanced.png",
+    "outputs": [
+      {
+        "file": "images/web/room-7-480.webp",
+        "width": 480,
+        "height": 695,
+        "bytes": 67706
+      },
+      {
+        "file": "images/web/room-7-960.webp",
+        "width": 960,
+        "height": 1390,
+        "bytes": 233358
+      },
+      {
+        "file": "images/web/room-7-1042.webp",
+        "width": 1042,
+        "height": 1509,
+        "bytes": 271286
+      }
+    ]
+  }
+]
